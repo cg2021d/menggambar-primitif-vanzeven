@@ -5,12 +5,12 @@ function main(){
     //definisikan vertex-vertex
     //A(0.0, 0.5), B(0.5, -0.5), C(-0.5, -0.5)
     var vertices = [
-        0.5, 0.5,   //titik A
-        0.5, -0.5,  //titik B
-        -0.5, -0.5, //titik C
-        -0.5, -0.5, //titik C
-        -0.5, 0.5, //titik D
-        0.5, 0.5, //titik A
+        0.3, 0,
+        0.3, -0.1,
+        -0.1, -0.1,
+        -0.1, 0.5,
+        0, 0.5,
+        0, 0,
     ];
 
     var positionBuffer = gl.createBuffer();
@@ -55,5 +55,5 @@ function main(){
     gl.clearColor(1.0, 1.0, 1.0, 1);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    gl.drawArrays(gl.TRIANGLES, 0, 6);
+    gl.drawArrays(gl.LINE_LOOP, 0, 6);
 }
